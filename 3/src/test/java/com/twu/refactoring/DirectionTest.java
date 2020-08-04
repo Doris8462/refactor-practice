@@ -8,13 +8,13 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 public class DirectionTest {
 
-    private Direction north;
-    private Direction east;
+    private ExtDirectionN north;
+    private ExtDirectionE east;
 
     @BeforeEach
     public void setUp() throws Exception {
-        north = new Direction('N');
-        east = new Direction('E');
+        north = new ExtDirectionN('N');
+        east = new ExtDirectionE('E');
     }
 
     @Test
