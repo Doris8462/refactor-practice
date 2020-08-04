@@ -19,11 +19,11 @@ public class CustomerTest {
 
     private Customer dinsdale = new Customer("Dinsdale Pirhana");
 
-    private Movie python = new Movie("Monty Python and the Holy Grail", Movie.REGULAR);
-	private Movie ran = new Movie("Ran", Movie.REGULAR);
-	private Movie la = new Movie("LA Confidential", Movie.NEW_RELEASE);
-	private Movie trek = new Movie("Star Trek 13.2", Movie.NEW_RELEASE);
-	private Movie wallace = new Movie("Wallace and Gromit", Movie.CHILDRENS);
+    private Movie python = new Movie("Monty Python and the Holy Grail", MovieType.Regular);
+	private Movie ran = new Movie("Ran", MovieType.Regular);
+	private Movie la = new Movie("LA Confidential", MovieType.NewRelease);
+	private Movie trek = new Movie("Star Trek 13.2", MovieType.NewRelease);
+	private Movie wallace = new Movie("Wallace and Gromit", MovieType.Children);
 
     @BeforeEach
     public void setUpData(){
@@ -47,7 +47,7 @@ public class CustomerTest {
 
     @Test
     public void shouldOutputChangedStatement() throws Exception {
-        la.setPriceCode(Movie.REGULAR);
+        la.setMovieType(MovieType.Regular);
         verifyOutput(dinsdale.statement(), "outputChange");
     }
 
